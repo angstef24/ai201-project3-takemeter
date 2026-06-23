@@ -46,10 +46,10 @@ What performance would make this classifier genuinely useful? What would you acc
 
 ## AI usage
 Disclose any use of AI tools in data collection, labeling, or analysis. (Required if you use LLM pre-labeling — every pre-assigned label must be reviewed and corrected by hand.)
-- Tools used:
-- Where used (collection / pre-labeling / analysis / writing):
-- If used for pre-labeling: which model, the exact prompt + label definitions given, how many examples were pre-labeled, and confirmation that I reviewed and corrected every label myself.
-- What I changed: roughly how many pre-assigned labels I overrode, and any pattern in the model's mistakes.
+- Tools used: Claude
+- Where used (collection / pre-labeling / analysis / writing): collection (scanning Reddit JSON for candidate Analysis posts), pre-labeling (preliminary labels on a batch of collected comments before my own pass), and analysis (pattern analysis on the 8 misclassified test examples after evaluation).
+- If used for pre-labeling: Claude; prompt included my full label definitions (Analysis, Opinion, and the substance test rule); Claude assigned a label for a batch before I reviewed; I reviewed and corrected every pre-assigned label myself before finalizing the dataset.
+- What I changed: I overrode a number of Opinion posts that Claude had labeled Analysis — the consistent pattern in Claude's mistakes was defaulting to Analysis whenever a post mentioned specific characters, scenes, or plot details, regardless of whether that content was doing argumentative work.
 
 ## Hard Edge Case
 Case 1:
